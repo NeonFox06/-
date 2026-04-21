@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Поддержка курьера</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.container {
+    max-width: 520px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 { font-size: 22px; margin-bottom: 5px; }
+.sub { color:#666; font-size:14px; margin-bottom:20px; }
+
+.card {
+    background:#f7f7f7;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+label { display:block; margin:6px 0; }
+
+textarea {
+    width:100%;
+    height:80px;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    resize:none;
+}
+
+button {
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.feedback-btn {
+    background:#4CAF50;
+    color:white;
+}
+
+.tip-btn {
+    background:#ff9800;
+    color:white;
+}
+
+.tip-btn:hover { background:#fb8c00; }
+
+.qr {
+    width:160px;
+    height:160px;
+    margin:10px auto;
+    border:2px dashed #bbb;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    color:#777;
+}
+
+.small {
+    text-align:center;
+    font-size:12px;
+    color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Спасибо за заказ 🙂</h1>
+    <div class="sub">Если всё ок — буду рад обратной связи</div>
+
+    <div class="card">
+        <b>Оценка доставки</b>
+        <label><input type="radio" name="rate"> 👍 Отлично</label>
+        <label><input type="radio" name="rate"> 🙂 Нормально</label>
+        <label><input type="radio" name="rate"> 👎 Есть проблемы</label>
+    </div>
+
+    <div class="card">
+        <b>Комментарий</b>
+        <textarea placeholder="Что можно улучшить?"></textarea>
+    </div>
+
+    <button class="feedback-btn" onclick="send()">Отправить отзыв</button>
+
+    <div class="card">
+        <b>Поддержать курьера ❤️</b>
+        <p style="font-size:13px;color:#666;">
+            Если хотите — можно оставить чаевые
+        </p>
+        <button class="tip-btn" onclick="tip()">Оставить чаевые</button>
+    </div>
+
+    <div class="card">
+        <b>QR-код</b>
+        <div class="qr">
+            сюда вставишь QR
+        </div>
+    </div>
+
+    <div class="small">
+        Спасибо 🙌
+    </div>
+
+</div>
+
+<script>
+function send() {
+    alert("Спасибо за отзыв 🙂");
+}
+
+function tip() {
+    // ВСТАВЬ СЮДА СВОЮ ССЫЛКУ (Telegram, СБП и т.д.)
+    window.location.href = "https://t.me/";
+}
+</script>
+
+</body>
+</html>
